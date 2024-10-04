@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>  
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProLang</title>
+    <link rel="stylesheet" href="PortfolioStyle.css">
+	<link rel="icon" href="Asset/Icon.png">
+</head>
+
+<body onload="LoadingScreen()">
+	
+			<div class="blacktab">
+				<h1 class = "WebsiteLogo" onclick="Home()">
+					Portfolio
+				</h1>	
+				<h2 onclick="About()">
+					Education
+				</h2>
+				<h2 onclick="TechTerm()">
+					Association
+				</h2>
+				<h2 onclick="ContactUs()">
+					Contact
+				</h2>
+			</div>
+			<img id="Mainbackground" src="Asset/Background.jpg" alt="">
+		
+			<div id="SoftwareSelector">
+				<img src="Asset/Roblox.png" alt="">
+			</div>
+			
+			<div id = "Banner" onmouseover="GlowingLogo()"onmouseleave="LightoutLogo()">
+				<h1 id="Logo">Portfolio</h1>
+				<h1 id="NeonLogo">Portfolio</h1>
+				<div id="glowingbar">
+					
+				</div>
+				<p id = "Introduction">
+					
+				</p>
+				<p id="DefaultIntroduction">
+					&emsp;"This website is a collection of archievement of Me."
+				</p>
+				
+			</div>
+
+			<div id = "LoadingBackground">
+				
+				<div id = "outsideloading">
+					<h1 id = "PercentageNumber">
+						0%
+					</h1>
+					<h1 id = "LoadingText">
+						Loading . . .
+					</h1>
+					<div id="insideloading">
+
+					</div>
+			</div>
+			</div>
+			
+
+</body>
+
+
+<script src="PortfolioScript.js"></script>
+
+
+
+</html>
