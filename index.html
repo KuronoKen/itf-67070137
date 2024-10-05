@@ -6,30 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProLang</title>
     <link rel="stylesheet" href="PortfolioStyle.css">
-	<link rel="icon" href="Asset/Icon.png">
 </head>
 
-<body onload="LoadingScreen()">
+<body>
 	
 			<div class="blacktab">
-				<h1 class = "WebsiteLogo" onclick="Home()">
+				<a class="headerlogo">
 					Portfolio
-				</h1>	
-				<h2 onclick="About()">
+				</a>	
+				<a class="headerbutton">
 					Education
-				</h2>
-				<h2 onclick="TechTerm()">
+				</a>
+				<a class="headerbutton">
 					Association
-				</h2>
-				<h2 onclick="ContactUs()">
+				</a>
+				<a class="headerbutton">
 					Contact
-				</h2>
+				</a>
 			</div>
 			<img id="Mainbackground" src="Asset/Background.jpg" alt="">
 		
-			<div id="SoftwareSelector">
+			<nav id="SoftwareSelector">
 				<img src="Asset/Roblox.png" alt="">
-			</div>
+				<img src="Asset/Asset_3.png" alt="">
+				<footer class="BannerFooter">
+					<p>Student Id : 67070137</p>
+					<button class="Copy" onclick="Copy(self,'67070137')">Copy</button>
+					<a class="SocialMedia" href="https://www.instagram.com/0_0noken/">My Instragram</a>
+				</footer>
+			</nav>
 			
 			<div id = "Banner" onmouseover="GlowingLogo()"onmouseleave="LightoutLogo()">
 				<h1 id="Logo">Portfolio</h1>

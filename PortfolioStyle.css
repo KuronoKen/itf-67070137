@@ -24,20 +24,22 @@
     position: fixed;
     display: flex;
     top:0%;
-    opacity: 0.85;
+    opacity: 0.8;
     color: white;
     z-index: 4;
     justify-content:end;
     transition: opacity 0.5s;
 }
-.blacktab>h1 {
+.headerlogo {
     position: absolute;
+    margin: 1%;
+    padding-top: 0.5%;
+    font-size: 5vh;
     left: 2% ;
-    opacity: 1;
     z-index: 5;
     transition: all 0.4s;
 }
-.blacktab>h2 { /*about*/
+.headerbutton { /*about*/
     right: 2%;
     margin: 20px;
     color: white;
@@ -46,6 +48,7 @@
     z-index: 5;
     align-self: flex-end;
     transition: all 0.4s;
+    font-size: 3vh;
 }
 #Mainbackground {
    /* Set rules to fill background */
@@ -63,28 +66,25 @@
    z-index: 0;
    object-fit: cover;
 }
-.whitebox {
-    background-color: rgb(0, 0, 0);
-    opacity: 0.7;
-    color: black;
-    font-family: AgencyFB; 
-}
 #SoftwareSelector {
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
     background-color: rgba(0,0,0,0.8);
     left: 56vw;
     top: 62vh;
     width: 38vw;
-    height: 30vh;
+    height: 34vh;
     min-width: 400px;
     min-height: 200px;
     z-index: 1;
     transition: opacity 0.7s;
+    justify-content: start;
 }
 #SoftwareSelector>img {
-    width:12%;
+    width: 12%;
     opacity: 1;
-    height: auto;
+    height: fit-content;
     margin-top: 5%;
     margin-left: 5%;
     position: relative;
@@ -136,18 +136,9 @@
 #Introduction {
     color: white;
     position: absolute;
-    top: 16vw;
-    left: 5%;
-    right: 5%;
-    font-family: Mitr;
-    transition: all 0.4s;
-}
-#DefaultIntroduction {
-    color: white;
-    position: absolute;
     left: 15%;
     right: 5%;
-    top: 13.5vw;
+    top: 5%;
     font-size: 140%;
     font-family: Mitr;
     text-shadow: 0 0 5px black;
@@ -155,141 +146,55 @@
     width: 40vw;
     max-width: 70%;
 }
-
-@media only screen and (max-width: 780px ) {
-    #Banner {
-        position: absolute;
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%,-30%);
-        opacity: 0.9;
-        width: 55vw;
-        height: 45vh;
-        min-width: 60%;
-        transition: all 0.5s;
-    }
-    #Introduction {
-        color: white;
-        position: absolute;
-        top: 30vw;
-        left: 5%;
-        right: 5%;
-        font-family: Mitr;
-        transition: all 0.4s;
-    }
-    #DefaultIntroduction {
-        color: white;
-        position: absolute;
-        top: 30vw;
-        font-family: Mitr;
-        transition: all 0.4s;
-        max-width: 100%;
-    }
-    #SoftwareSelector {
-        position: absolute;
-        left: 50%;
-        top: 70%;
-        transform: translate(-50%,-15%);
-        max-width: 80vh;
-        width: 80%;
-        height: 30vh;
-        z-index: 1;
-        transition: opacity 0.7s;
-    }
-    
-}
-
-
-
-/*Loading Screen*/
-
-#LoadingBackground {
-    background-color: black;
-    /* Set rules to fill background */
-   min-height: 100%;
-   min-width: 100%;
-     
-   /* Set up proportionate scaling */
-   width: 100%;
-   height:100%;
-     
-   /* Set up positioning */
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: 6;
-   transition: all 1s;
-}
-#outsideloading {
-    border-color: white;
-    border-style: solid;
-    border-width: 3px;
-    position: fixed;
-    width: 40%;
-    height: 4%;
-    top: 50%;
-    left: 30%;
-    z-index: 7;
-    transition: all 1s;
-}
-#insideloading{
-    background-color: white;
+#DefaultIntroduction {
+    color: white;
     position: absolute;
-    top: 20%;
-    /*width:98%;*/  /* 98 * (percentage/100)*/ 
-    width: 0%;
-    left: 1%;
-    height: 60%;
-    z-index: inherit;
-    transition: width 4s cubic-bezier(0.7, 0, 0.84, 0);
+    margin: 2%;
+    padding: 0%;
+    left: 15%;
+    right: 5%;
+    font-size: 140%;
+    font-family: Mitr;
+    text-shadow: 0 0 5px black;
+    transition: all 0.4s;
+    width: 40vw;
+    max-width: 70%;
 }
-#PercentageNumber {
+.BannerFooter{
+    display: flex;
+    flex-wrap: wrap;
     color: white;
-    position: fixed;
-    left: 66%;
-    top: 40%;
-    z-index: 7;
+    font-size: 140%;
     font-family: AgencyFB;
-    font-size: 2.5vw;
+    width: 90%;
+    flex-basis: 100%;
+    height: fit-content;
+    margin: 3%;
+    padding: 2%;
+    border: 2px solid white;
 }
-#LoadingText {
+.BannerFooter>p{
+    width: fit-content;
+    margin: 1%;
+    padding: 1%;
+}
+.Copy{
+    font-size: 4vh;
+    background-color: white;
+    font-family: AgencyFB;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.3s;
+}
+.Copy:active{
+    text-shadow: 0 0 20px red;
+}
+.SocialMedia{
+    flex-basis: 100%;
+    margin: 1%;
+    padding: 1%;
     color: white;
-    position: fixed;
-    left: 30%;
-    top: 40%;
-    z-index: 7;
-    font-family: AgencyFB;
-    font-size: 2.5vw;
 }
-
-@media only screen and (max-width: 500px){
-    .blacktab>h2 { /*about*/
-        right: 25vw;
-        font-size: 4vw;
-        top: 20%;
-    }
-    #Contact {
-        right: 5vw;
-        top: 20%;
-    }
-    #TechnicalTerm {
-        right: 40vw;
-        top: 20%;
-    }
-    #PercentageNumber {
-        position: absolute;
-        left: 50%;
-        top: 0%;
-        transform: translate(-50%,0%);
-        z-index: 7;
-        font-family: AgencyFB;
-        font-size: 10vw;
-    }
-    #LoadingText {
-        font-size: 0vw;
-    }
-}
-
 
 /*hover function*/
 .blacktab:hover {
@@ -309,11 +214,14 @@
     cursor: pointer;
     margin-left: 3.5%;
     margin-top: 3.5%;
-    width: 15%;
+    width: 12vh;
     opacity: 1;
 }
-.blacktab>h2:hover{
+.headerbutton:hover{
     cursor: pointer;
-    text-shadow: 0 0 10px white; 
+    text-shadow: 0 0 20px white; 
 }
-
+.headerlogo:hover{
+    cursor: pointer;
+    text-shadow: 0 0 20px white; 
+}
